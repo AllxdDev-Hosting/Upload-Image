@@ -1,0 +1,69 @@
+<%- include('partials/header') %>
+
+<body>
+   <div class="container">
+      <table class="nav">
+         <th><h1><a href="/"><%- header %></a></h1></th>
+      </table>
+      <div class="grid">
+         <div class="col-12_sm-12">
+            <div class="boxed pd-20">
+               <table class="info" cellpadding="3">
+                  <tr>
+                     <td>Filename</td>
+                     <td>:</td>
+                     <td><%- data.filename %></td>
+                  </tr>
+                  <tr>
+                     <td>Size</td>
+                     <td>:</td>
+                     <td><%- data.size %></td>
+                  </tr>
+                  <tr>
+                     <td>Detail</td>
+                     <td>:</td>
+                     <td class="ellipsis"><%- domain %>file/<%- data.code %></td>
+                  </tr>
+                  <tr>
+                     <td>Download</td>
+                     <td>:</td>
+                     <td class="ellipsis"><%- domain %><%- path %>/<%- data.filename %></td>
+                  </tr>
+               </table>
+               <center><button onclick="download()"> Download </button>
+                 <small> Files will be deleted within 60 minutes. Timeout : <span id="countdown"></span></small></center>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script>
+      function download() {
+         new jsFileDownloader({
+            url: '<%- domain %><%- path %>/<%- data.filename %>',
+            forceDesktopMode: true
+         })
+         .catch(function(error) {
+            alert('Something went wrong!')
+         })
+      }
+      var target_date = '<%- data.expired_at %>'
+      var days, hours, minutes, seconds
+      var countdown = document.getElementById('countdown')
+      setInterval(function() {
+         var current_date = new Date().getTime()
+         var seconds_left = (target_date - current_date) / 1000
+         days = parseInt(seconds_left / 86400)
+         seconds_left = seconds_left % 86400
+         hours = parseInt(seconds_left / 3600)
+         seconds_left = seconds_left % 3600
+         minutes = parseInt(seconds_left / 60)
+         seconds = parseInt(seconds_left % 60)
+         var D = days < 10 ? "0" + days: days,
+         H = hours < 10 ? "0" + hours: hours,
+         M = minutes < 10 ? "0" + minutes: minutes,
+         S = seconds < 10 ? "0" + seconds: seconds
+         countdown.innerHTML = H + ":" + M + ":" + S
+      }, 1000)
+   </script>
+   <script src="/assets/js/js-file-downloader.min.js"></script>
+</body>

@@ -1,0 +1,50 @@
+{
+  "name": "open-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": ">= 18.x",
+    "npm": ">= 9.x"
+  },
+  "scripts": {
+    "start": "node . --max-old-space-size=1024"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Fyyre Lenathea",
+    "email": "contact@neoxr.my.id",
+    "url": "https://mashaforxcounter.vercel.app"
+  },
+  "dependencies": {
+    "axios": "~0.24.0",
+    "body-parser": "~1.19.2",
+    "bytes": "^3.1.2",
+    "cfonts": "3.1.1",
+    "chalk": "4.1.0",
+    "cors": "^2.8.5",
+    "debug": "^4.3.4",
+    "dotenv": "^16.0.2",
+    "ejs": "^3.1.7",
+    "express": "^4.16.2",
+    "express-minify-html": "^0.12.0",
+    "express-rate-limit": "^7.4.1",
+    "file-type": "~16.5.2",
+    "form-data": "^4.0.0",
+    "formidable": "^2.1.1",
+    "fs": "^0.0.1-security",
+    "mime-types": "^2.1.35",
+    "morgan": "^1.10.0",
+    "mv": "^2.1.1",
+    "path": "^0.12.7",
+    "request-ip": "^3.3.0",
+    "rootpath": "^0.1.2",
+    "serve-favicon": "^2.5.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0"
+  }
+}

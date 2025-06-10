@@ -1,0 +1,275 @@
+.file-upload .file-select,
+.file-upload .file-select.file-select-disabled:hover {
+   display: block;
+   text-align: left;
+   overflow: hidden;
+   position: relative;
+   line-height: 40px
+}
+
+.file-upload .file-select,
+.file-upload .file-select .file-select-button {
+   height: 40px;
+   background: #1c2333
+}
+
+.nav h1,
+.stats h1,
+body {
+   margin: 0;
+   padding: 0
+}
+
+.nav h1,
+.stats .count,
+.stats h1 {
+   text-transform: uppercase
+}
+
+body,
+button,
+.nav a {
+   color: #fff
+}
+
+#progress,
+button {
+   margin-bottom: 10px
+}
+
+.center,
+.file-upload,
+.info td:nth-child(2) {
+   text-align: center
+}
+
+.file-upload,
+body,
+button {
+   font-family: Share Tech Mono, sans-serif
+}
+
+.info,
+.stats,
+button {
+   width: 100%
+}
+
+.file-upload .file-select .file-select-button,
+.file-upload .file-select .file-select-name,
+.file-upload .file-select.file-select-disabled:hover .file-select-name {
+   padding: 0 10px;
+   display: inline-block;
+   line-height: 40px
+}
+
+* {
+   box-sizing: border-box
+}
+
+:focus {
+   outline: 0
+}
+
+a {
+   color: #212121;
+   text-decoration: none
+}
+
+body {
+   background: linear-gradient(45deg, #ff007a, #7a00ff, #00ffd5, #00ff00);
+   background-size: 800% 800%;
+   animation: gradientAnimation 20s ease infinite
+}
+
+@keyframes gradientAnimation {
+   0% {
+      background-position: 0% 50%
+   }
+
+   50% {
+      background-position: 100% 50%
+   }
+
+   100% {
+      background-position: 0% 50%
+   }
+}
+
+.container {
+   border: 0;
+   margin: auto;
+   padding: 20px 20px 0;
+   max-width: 650px
+}
+
+.boxed {
+   background-color: rgb(14 21 37 / .5);
+   backdrop-filter: blur(5px);
+   padding: 10px;
+   max-width: 100%;
+   border: 0 solid #fff;
+   border-radius: 5px;
+   -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+   clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%)
+}
+
+.nav h1 {
+   font-size: 35px;
+   font-family: 'Teko';
+   letter-spacing: 3px
+}
+
+.pd-20 {
+   padding: 20px
+}
+
+.pd-30 {
+   padding: 30px
+}
+
+.stats h1 {
+   font-size: 14px;
+   font-weight: 400
+}
+
+.stats svg {
+   position: relative;
+   top: 4px
+}
+
+.stats .count {
+   position: relative;
+   top: 7px;
+   font-size: 25px
+}
+
+.stats td:first-child {
+   text-align: center;
+   width: 100px;
+   border-right: 1px solid #333;
+   padding-right: 10px
+}
+
+.stats td:nth-child(2) {
+   padding-left: 10px
+}
+
+#progress {
+   font-size: 15px
+}
+
+.info {
+   margin-bottom: 20px
+}
+
+.info td {
+   border-bottom: 1px dashed #333;
+   font-size: 14px;
+   padding: 7px
+}
+
+.info td:first-child {
+   width: 80px
+}
+
+.info td:nth-child(2) {
+   width: 20px
+}
+
+button {
+   font-size: 14px;
+   padding: 10px;
+   background: #1c2333;
+   border: 0;
+   cursor: none;
+   border-radius: 5px
+}
+
+.file-upload .file-select:hover .file-select-button,
+button:hover {
+   background: rgb(239 223 13 / .9);
+   color: #222;
+   transition: .2s ease-in-out;
+   -moz-transition: .2s ease-in-out;
+   -webkit-transition: .2s ease-in-out;
+   -o-transition: .2s ease-in-out
+}
+
+#countdown {
+   color: rgb(239 223 13 / .9);
+   font-weight: 700
+}
+
+.file-upload {
+   display: block;
+   font-size: 14px
+}
+
+.file-upload .file-select {
+   color: #fff;
+   border-radius: 5px
+}
+
+.file-upload.active .file-select .file-select-button {
+   background: #3fa46a;
+   color: #fff;
+   transition: .2s ease-in-out;
+   -moz-transition: .2s ease-in-out;
+   -webkit-transition: .2s ease-in-out;
+   -o-transition: .2s ease-in-out
+}
+
+.file-upload .file-select input[type=file] {
+   z-index: 100;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   left: 0;
+   opacity: 0
+}
+
+.file-upload .file-select.file-select-disabled {
+   opacity: .65
+}
+
+.file-upload .file-select.file-select-disabled:hover {
+   border: 2px solid #1c2333;
+   color: rgb(239 223 13 / .9);
+   cursor: pointer;
+   height: 40px;
+   margin-top: 5px;
+   background: #fff
+}
+
+.file-upload .file-select.file-select-disabled:hover .file-select-button {
+   background: #1c2333;
+   color: #666;
+   padding: 0 10px;
+   display: inline-block;
+   height: 40px;
+   line-height: 40px
+}
+
+.progress-container {
+   width: 100%;
+   background-color: rgb(14 21 37 / .5);
+   border-radius: 10px;
+   margin-bottom: 20px;
+   overflow: hidden
+}
+
+.progress-bar {
+   height: 7px;
+   width: 0;
+   background-color: rgb(239 223 13 / .9);
+   transition: width 0.3s
+}
+
+.ellipsis {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   max-width: 100px
+}
